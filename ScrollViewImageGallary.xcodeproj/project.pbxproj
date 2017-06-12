@@ -14,6 +14,7 @@
 		FF08805D1EEF33D800CB83D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF08805C1EEF33D800CB83D7 /* Assets.xcassets */; };
 		FF0880601EEF33D800CB83D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF08805E1EEF33D800CB83D7 /* LaunchScreen.storyboard */; };
 		FF08806B1EEF33D900CB83D7 /* ScrollViewImageGallaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF08806A1EEF33D900CB83D7 /* ScrollViewImageGallaryTests.m */; };
+		FF0880771EEF4C4200CB83D7 /* DetailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0880761EEF4C4200CB83D7 /* DetailedViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		FF0880661EEF33D900CB83D7 /* ScrollViewImageGallaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollViewImageGallaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF08806A1EEF33D900CB83D7 /* ScrollViewImageGallaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewImageGallaryTests.m; sourceTree = "<group>"; };
 		FF08806C1EEF33D900CB83D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF0880751EEF4C4200CB83D7 /* DetailedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailedViewController.h; sourceTree = "<group>"; };
+		FF0880761EEF4C4200CB83D7 /* DetailedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailedViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				FF0880541EEF33D800CB83D7 /* AppDelegate.m */,
 				FF0880561EEF33D800CB83D7 /* ViewController.h */,
 				FF0880571EEF33D800CB83D7 /* ViewController.m */,
+				FF0880751EEF4C4200CB83D7 /* DetailedViewController.h */,
+				FF0880761EEF4C4200CB83D7 /* DetailedViewController.m */,
 				FF0880591EEF33D800CB83D7 /* Main.storyboard */,
 				FF0880501EEF33D800CB83D7 /* Supporting Files */,
 			);
@@ -217,6 +222,7 @@
 			files = (
 				FF0880581EEF33D800CB83D7 /* ViewController.m in Sources */,
 				FF0880551EEF33D800CB83D7 /* AppDelegate.m in Sources */,
+				FF0880771EEF4C4200CB83D7 /* DetailedViewController.m in Sources */,
 				FF0880521EEF33D800CB83D7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

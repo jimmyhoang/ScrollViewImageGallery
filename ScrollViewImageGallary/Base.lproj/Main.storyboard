@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Xiu-TW-vnN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--ImageGallary-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="ImageGallary" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -22,18 +22,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eca-Zq-bQ9">
-                                <rect key="frame" x="0.0" y="28" width="375" height="411"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="411" id="5c7-Ra-69u"/>
-                                </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="eca-Zq-bQ9" secondAttribute="trailing" id="EOs-VK-kRw"/>
-                            <constraint firstItem="eca-Zq-bQ9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="J7c-V5-U2i"/>
+                            <constraint firstItem="eca-Zq-bQ9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="J7c-V5-U2i"/>
                             <constraint firstItem="eca-Zq-bQ9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Khe-tN-1nk"/>
+                            <constraint firstItem="eca-Zq-bQ9" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Laf-kp-Hor"/>
                         </constraints>
                     </view>
                     <connections>
@@ -43,6 +41,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--DetailView-->
+        <scene sceneID="wij-gA-9uf">
+            <objects>
+                <viewController title="DetailView" id="Xiu-TW-vnN" customClass="DetailedViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OWx-tW-dDn"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rvn-Pk-7HW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pbP-Wt-Gef">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NS8-IT-9b0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rvn-Pk-7HW" firstAttribute="top" secondItem="NS8-IT-9b0" secondAttribute="bottom" id="3kU-Ws-faC"/>
+                            <constraint firstItem="NS8-IT-9b0" firstAttribute="top" secondItem="pbP-Wt-Gef" secondAttribute="top" id="8TM-QP-ybZ"/>
+                            <constraint firstAttribute="trailing" secondItem="NS8-IT-9b0" secondAttribute="trailing" id="CRD-pm-BhB"/>
+                            <constraint firstItem="NS8-IT-9b0" firstAttribute="leading" secondItem="pbP-Wt-Gef" secondAttribute="leading" id="QD1-T5-xEc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="NS8-IT-9b0" id="XdH-qS-dWY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Efp-8m-8bA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="813.64317841079469"/>
         </scene>
     </scenes>
 </document>
