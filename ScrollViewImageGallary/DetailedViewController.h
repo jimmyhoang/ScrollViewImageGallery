@@ -10,4 +10,8 @@
 
 @interface DetailedViewController : UIViewController <UIScrollViewDelegate>
 
+@property (weak, nonatomic) UIImage* imageToZoom;
+
+
+
 @end

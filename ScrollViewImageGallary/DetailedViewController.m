@@ -21,6 +21,7 @@
     self.scrollView.delegate = self;
     UIImageView* imageView = [[UIImageView alloc] init];
     self.imageView = imageView;
+    self.imageView.image = self.imageToZoom;
     imageView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.scrollView addSubview:imageView];
     
@@ -38,5 +39,6 @@
 -(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     return self.imageView;
 }
+
 
 @end
