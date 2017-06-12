@@ -86,9 +86,6 @@
 				FF0880561EEF33D800CB83D7 /* ViewController.h */,
 				FF0880571EEF33D800CB83D7 /* ViewController.m */,
 				FF0880591EEF33D800CB83D7 /* Main.storyboard */,
-				FF08805C1EEF33D800CB83D7 /* Assets.xcassets */,
-				FF08805E1EEF33D800CB83D7 /* LaunchScreen.storyboard */,
-				FF0880611EEF33D800CB83D7 /* Info.plist */,
 				FF0880501EEF33D800CB83D7 /* Supporting Files */,
 			);
 			path = ScrollViewImageGallary;
@@ -97,6 +94,9 @@
 		FF0880501EEF33D800CB83D7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FF08805C1EEF33D800CB83D7 /* Assets.xcassets */,
+				FF08805E1EEF33D800CB83D7 /* LaunchScreen.storyboard */,
+				FF0880611EEF33D800CB83D7 /* Info.plist */,
 				FF0880511EEF33D800CB83D7 /* main.m */,
 			);
 			name = "Supporting Files";
