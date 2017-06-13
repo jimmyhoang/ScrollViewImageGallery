@@ -11,6 +11,8 @@
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, strong) UIPageControl* pageControl;
+@property (nonatomic, assign) NSInteger page;
 
 @end
 
@@ -21,12 +23,10 @@
 
     self.scrollView.delegate = self;
     self.scrollView.pagingEnabled = YES;
+    self.scrollView.showsHorizontalScrollIndicator = NO;
     UITapGestureRecognizer* tapGesture1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageTapped:)];
     UITapGestureRecognizer* tapGesture2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageTapped:)];
     UITapGestureRecognizer* tapGesture3 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageTapped:)];
-    
-
-
     
     UIImageView* image1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Lighthouse-in-Field"]];
     image1.translatesAutoresizingMaskIntoConstraints = NO;
@@ -64,6 +64,13 @@
     [image3.centerYAnchor constraintEqualToAnchor:self.scrollView.centerYAnchor].active = YES;
     [image3.widthAnchor constraintEqualToAnchor:self.scrollView.widthAnchor].active = YES;
     [image3.heightAnchor constraintEqualToAnchor:self.scrollView.heightAnchor].active = YES;
+
+    self.pageControl = [[UIPageControl alloc] init];
+    self.pageControl.frame = CGRectMake(168, 600, 100, 100);
+    self.pageControl.numberOfPages = 3;
+    self.pageControl.currentPage = 0;
+    [self.view addSubview:self.pageControl];
+    
     
 }
 
@@ -80,6 +87,13 @@
         destinationVC.imageToZoom = sender.image;
     }
     
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat pageWidth = self.scrollView.frame.size.width;
+    float fractionalPage = self.scrollView.contentOffset.x / pageWidth;
+    NSInteger page = lround(fractionalPage);
+    self.pageControl.currentPage = page;
 }
 
 
